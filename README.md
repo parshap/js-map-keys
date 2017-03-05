@@ -5,7 +5,7 @@ Map object keys returning a new object
 # Example
 ```js
 var map = require("map-keys");
-map({ foo: 2 }, function(key, val, obj) {
+map({ foo: 2 }, function(val, key, obj) {
   return key + "bar";
 });
 // -> { foobar: 2 }
