@@ -8,7 +8,8 @@ test("should map object", function(t) {
 	var obj = map({ foo: 2, bar: 5 }, function(val, key) {
 		return key + "baz";
 	});
-	assert(Object.keys(obj).length === 2);
-	assert(obj.foobaz === 2);
-	assert(obj.barbaz === 5);
+	t.equal(Object.keys(obj).length, 2);
+	t.equal(obj.foobaz, 2);
+	t.equal(obj.barbaz, 5);
+	t.end();
 });
